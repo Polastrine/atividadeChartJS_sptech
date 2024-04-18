@@ -4,26 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <title>Atividade ChartJS</title>
     
 
 
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Bebas Neue", sans-serif;
+        }
+
+        body{
+            background-color: rgb(180, 221, 156);
+        }
+
+        .titleText{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 25px;
+          background-color: rgba(80, 206, 90, 0.61);
+          height: 100px;
+          box-shadow: 7px 7px 25px -9px rgba(0,0,0,0.71);
+        }
+
+        .titleText h1{
+            color: rgb(1, 63, 15);
+        }
 
         .boxGraficos{
           justify-content: center;
+          margin-top: 200px;
           display: flex;
           flex-direction: row;
+          gap: 50px;
         }
 
+        .boxGrafico1{
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            text-align: center;
+            font-size: 30px;
+        }
 
+        .boxGrafico2{
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            text-align: center;
+            font-size: 30px;
+        }
 
         .grafico1{
-          width: 40%;
+          background-color: rgba(80, 206, 90, 0.61);
+          font-weight: bold;
+          padding: 70px;
+          box-shadow: 7px 7px 25px -9px rgba(0,0,0,0.71);
         }
 
         .grafico2{
-          width: 40%;
+          background-color: rgba(80, 206, 90, 0.61);
+          font-weight: bold;
+          padding: 70px;
+          box-shadow: 7px 7px 25px -9px rgba(0,0,0,0.71);
         }
 
 
@@ -44,13 +92,36 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <div class="titleText">
+        <h1>Monitoramento de Alface</h1>
+    </div>
+
+
+
     <div class="boxGraficos">
-      <div class="grafico1">
-        <canvas id="myChart1"></canvas>
-      </div>
-      <div class="grafico2">
-        <canvas id="myChart2"></canvas>
-      </div>
+
+        <div class="boxGrafico1">
+            <div class="titleGrafico1">
+                <h3>Gráfico de Barras</h3>
+            </div>
+
+            <div class="grafico1">
+                <canvas id="myChart1"></canvas>
+            </div>
+        </div>
+
+
+        <div class="boxGrafico2">
+            <div class="titleGrafico2">
+                <h3>Gráfico de Linhas</h3>
+            </div>
+
+
+            <div class="grafico2">
+                <canvas id="myChart2"></canvas>
+            </div>
+        </div>
+
     </div>
 
 
